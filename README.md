@@ -1,1 +1,2 @@
-# cakephp-ex
+CakePHP Sample App on OpenShift
+=======
