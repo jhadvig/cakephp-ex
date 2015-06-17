@@ -195,11 +195,12 @@
     {
       "name": "SOURCE_REPOSITORY_URL",
       "description": "The URL of the repository with your application source code",
-      "value": "https://github.com/jhadvig/cakephp-example.git"
+      "value": "https://github.com/jhadvig/cakephp-ex.git"
     },
     {
       "name": "SOURCE_REPOSITORY_REF",
-      "description": "Set this to a branch name, tag or other ref of your repository if you are not using the default branch"
+      "description": "Set this to a branch name, tag or other ref of your repository if you are not using the default branch",
+      "value" : "initial_test"
     },
     {
       "name": "CONTEXT_DIR",
