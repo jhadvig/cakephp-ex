@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-/usr/local/sti/bin/assemble
+/usr/local/sti/assemble
 
 [[ -d ./app/tmp ]] && chmod -R go+rw ./app/tmp
 
