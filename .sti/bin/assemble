@@ -1,22 +1,8 @@
 #!/bin/bash -e
 
-echo "---> Installing application source"
-cp -Rf /tmp/src/. ./
+/usr/local/sti/bin/assemble
 
-if [ -f composer.json ]; then
-    echo "Installing dependencies from composer.json... "
-
-    # Install Composer
-    php -r "readfile('https://getcomposer.org/installer');" | php
-
-    # Install App dependencies using Composer
-    ./composer.phar install --no-interaction --no-ansi --no-scripts --optimize-autoloader
-    
-    if [ ! -f composer.lock ]; then
-	   echo -e "\nConsider adding a composer.lock file into your source repository\n"
-    fi
-fi
-
+[[ -d ./app/tmp ]] && chmod -R go+rw ./app/tmp
 
 # Get access to `cake` shell command for generating DB schema and migrations
 if [ -f ${HOME}/app/Console/cake ]; then
